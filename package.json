@@ -1,0 +1,22 @@
+{
+    "name": "clipcc-extension-hello",
+    "version": "0.1.0",
+    "description": "Hello, ClipCC!",
+    "author": "Clip Team",
+    "license": "MIT",
+    "scripts": {
+        "build": "rimraf ./build && mkdirp build && rimraf ./dist && mkdirp dist && webpack --colors --bail",
+        "build:dist": "NODE_ENV=production yarn run build"
+    },
+    "dependencies": {
+        "clipcc-extension": "0.1.5"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^6.2.0",
+        "mkdirp": "^1.0.4",
+        "rimraf": "^3.0.2",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "zip-webpack-plugin": "^3.0.0"
+    }
+}
