@@ -10,9 +10,13 @@ const config = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'build'),
+        module: true,
         library: {
             type: 'commonjs2'
         }
+    },
+    experiments: {
+        outputModule: true
     },
     externals: {
         'clipcc-extension': 'ClipCCExtension'
@@ -22,13 +26,13 @@ const config = {
         new CopyWebpackPlugin({
             patterns: [{
                 from: path.join(__dirname, 'locales'),
-                to: path.join(__dirname, 'build/locales'),
+                to: path.join(__dirname, 'build/locales')
             }, {
                 from: path.join(__dirname, 'assets'),
-                to: path.join(__dirname, 'build/assets'),
+                to: path.join(__dirname, 'build/assets')
             }, {
                 from: path.join(__dirname, 'info.json'),
-                to: path.join(__dirname, 'build/info.json'),
+                to: path.join(__dirname, 'build/info.json')
             }]
         }),
         new ZipWebpackPlugin({

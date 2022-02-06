@@ -8,7 +8,7 @@ class Loader extends Extension {
         try {
             await userscript.default(vm, block);
         } catch (e) {
-            alert("Load Error:"+e);
+            alert('Load Error:'+e);
         }
     }
 }
